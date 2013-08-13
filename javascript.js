@@ -8,7 +8,7 @@ $(document).ready(function(){
         if (future.size() == 0 )
         {
         $('body').append("<h3>You Won!</h3>");
-        $('body').append("<a id='restart' href='#'>Play Again</a>");
+        $("#restart").css('visibility', 'visible');
         }
         else 
         {
@@ -16,7 +16,6 @@ $(document).ready(function(){
           future.addClass('active');
         }
       };
-
 
       if (player == 1)
         {
@@ -29,8 +28,6 @@ $(document).ready(function(){
 
       update_location(starting_cell);
     };
-
-
 
     $(document).keyup(function(e) {
       if ($('h3').size() == 0)  
@@ -46,16 +43,14 @@ $(document).ready(function(){
       };
     });
 
-
-// in progress
-  // $('#restart').click(function(){
-  //   console.log("clicked");
-  //   $("h3").remove();
-  //   $("#player1_strip").removeClass();
-  //   $("#player2_strip").removeClass();
-  //   $("#player1_strip:first-child").addClass('active');
-  //   $("#player2_strip:first-child").addClass('active');
-  //   $("#restart").remove();
-  // });  
-
+    $("#restart").click(function() {
+      // console.log("clicked");
+    $("#restart").css('visibility', 'hidden');      
+    $("h3").remove();
+    $("#player1_strip td").removeClass();
+    $("#player2_strip td").removeClass();
+    $("#player1_strip :first-child").addClass('active');
+    $("#player2_strip :first-child").addClass('active');
+    });
 });
+
