@@ -1,12 +1,18 @@
 .racer_table td {
   background-color: white;
-  height: 20px;
-  width: 20px;
+  height: 100px;
+  width: 100px;
   border: 1px solid black;
 }
 
-.racer_table td.active {
-  background-color: black;
+.racer_table #player1_strip td.active {
+  /*background-color: black;*/
+  background-image: url("B.png"); 
+}
+
+.racer_table #player2_strip td.active {
+  /*background-color: black;*/
+  background-image: url("G.png"); 
 }
 
 table {
